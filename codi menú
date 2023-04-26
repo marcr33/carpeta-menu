@@ -1,0 +1,53 @@
+import ddf.minim.*;
+
+Minim minim;
+AudioPlayer musica;
+
+PImage E;
+PImage PortadaMessi;
+PImage PimBomba;
+PImage TankSimulator;
+PImage PlujaDeMeteorits;
+PImage SlideBall;
+PImage BotoApagar;
+PFont mono;
+
+void setup(){
+  size(1000,600);
+         E=loadImage("FonsEspai.jpeg");
+     image(E,0,0,1000,600);
+     
+  rect(150,125,150,150,90);//adalt a l'esquerra
+  rect(425,125,150,150,90);//adalt al mitg
+  rect(700,125,150,150,90);//adalt a la dreta
+  rect(150,375,150,150,90);//a baix a l'esquerra
+  rect(425,375,150,150,90);//a baix al mitg
+  rect(700,375,150,150,90);//a baix a la dreta
+  color(255);
+  mono = createFont("PixeloidMono-VGj6x.ttf",60);
+  textSize(50);
+  textFont(mono);
+  text("ESCULL EL JOC",270,75);
+  PortadaMessi=loadImage("PortadaMessi.png");
+     image(PortadaMessi,150,125,175,175);
+     PimBomba=loadImage("PimBomba.png");
+     image(PimBomba,425,125,175,175);
+     TankSimulator=loadImage("TankSimulator.png");
+     image(TankSimulator,425,375,175,175);
+     PlujaDeMeteorits=loadImage("PlujaDeMeteorits.png");
+     image(PlujaDeMeteorits,700,125,175,175);
+     SlideBall=loadImage("SlideBall.png");
+     image(SlideBall,125,375,200,150);
+     BotoApagar=loadImage("BotoApagar.png");
+     image(BotoApagar,685,365,175,175);
+     minim = new Minim(this);
+     musica = minim.loadFile("tetrisgameboy1-gameboy.mp3");
+  }
+
+void draw(){
+   musica.play();
+
+
+}
+
+
